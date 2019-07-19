@@ -15,28 +15,20 @@ namespace Shop
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
+            app.UseDeveloperExceptionPage();//выводит ошибки непосредственно на самой странице
+            app.UseStatusCodePages();// возращает коды запросов
+            app.UseStaticFiles();//Использование статических файлов(.css , .jpg)
+            app.UseMvcWithDefaultRoute(); //url link который вызывает контроллер по умолчанию (если за данным роутом не закремлён контроллер)
+            /*app.Run(async (context) =>
             {
-                app.UseDeveloperExceptionPage();
-            }
-
-            if (env.IsProduction())
-            {
-                app.Run(async (context) =>
-                {
-                    await context.Response.WriteAsync("Production!");
-                });
-            }
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+                await context.Response.WriteAsync("Production!");
+            });*/
         }
     }
 }
