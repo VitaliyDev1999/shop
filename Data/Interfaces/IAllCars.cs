@@ -8,7 +8,7 @@ namespace Shop.Data.Interfaces
 {
     interface IAllCars
     {
-        IEnumerable<Car> Cars { get; set; }
+        IEnumerable<Car> Cars { get;  }
         IEnumerable<Car> GetFavCars { get; set; }
         Car getObjectCar(int carId);
     }
