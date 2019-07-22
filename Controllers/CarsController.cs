@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Shop.Data.Interfaces;
+using Shop.ViewModels;
 
 namespace Shop.Controllers
 {
@@ -20,7 +21,12 @@ namespace Shop.Controllers
 
         public ViewResult List()
         {
-            var cars = allCars.Cars;
+            //ViewBag.Category = "Some new";
+            //var cars = allCars.Cars;
+            ViewBag.Title = "Страница с автомобилями";
+            CarListViewModel cars = new CarListViewModel();
+            cars.allCars = allCars.Cars;
+            cars.currCategory = "Автомобили";
             return View(cars);
         }
     }
