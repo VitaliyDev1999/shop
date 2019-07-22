@@ -33,6 +33,15 @@ namespace Shop.Data.Mocks
                         img = "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjuy6nm6sHjAhWl1aYKHW8mA24QjRx6BAgBEAU&url=https%3A%2F%2Flink.photo%2Fimage%2FHekS&psig=AOvVaw0kb67M784wtD4mRuB9ypw7&ust=1563654957036827",
                         isFavourite = true,
                         available = true,
+                        Categoty = _categoryCars.AllCateories.Last() },
+                    new Car {
+                        name = "Mercedes",
+                        shortDesc = "удобная машина бизнес класса",
+                        longDesc = "удобная машина, но потребляет много бензина",
+                        price = 35000,
+                        img = "https://ru.wikipedia.org/wiki/Mercedes-Benz_W213#/media/%D0%A4%D0%B0%D0%B9%D0%BB:2019_Mercedes-Benz_E220d_SE_Automatic_2.0_Front.jpg",
+                        isFavourite = true,
+                        available = true,
                         Categoty = _categoryCars.AllCateories.Last() }
                 };
             }
