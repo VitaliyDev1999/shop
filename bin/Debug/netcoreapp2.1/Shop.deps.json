@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "aa8d709153425bc935e30d86c5da65aa526fee18"
+    "signature": "bc0b5aabe8c6b559bc1ee441abe5cd1bbde8b5c1"
   },
   "compilationOptions": {
     "defines": [
@@ -24,7 +24,8 @@
     ".NETCoreApp,Version=v2.1": {
       "Shop/1.0.0": {
         "dependencies": {
-          "EntityFramework": "6.2.0",
+          "EntityFramework": "6.1.3",
+          "JSON": "1.0.1",
           "Microsoft.AspNet.Mvc": "5.2.7",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
@@ -38,20 +39,31 @@
           "Shop.dll": {}
         }
       },
-      "EntityFramework/6.2.0": {
+      "EntityFramework/6.1.3": {
         "runtime": {
           "lib/net45/EntityFramework.SqlServer.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.2.61023.0"
+            "fileVersion": "6.1.40302.0"
           },
           "lib/net45/EntityFramework.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.2.61023.0"
+            "fileVersion": "6.1.40302.0"
           }
         },
         "compile": {
           "lib/net45/EntityFramework.SqlServer.dll": {},
           "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "JSON/1.0.1": {
+        "runtime": {
+          "lib/net40/Json.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net40/Json.dll": {}
         }
       },
       "Microsoft.AspNet.Mvc/5.2.7": {
@@ -3547,12 +3559,19 @@
       "serviceable": false,
       "sha512": ""
     },
-    "EntityFramework/6.2.0": {
+    "EntityFramework/6.1.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
-      "path": "entityframework/6.2.0",
-      "hashPath": "entityframework.6.2.0.nupkg.sha512"
+      "sha512": "sha512-2xzFHAF3VVdmTR3//MygtQpwfbDjeaq+nQwCcokLzen7MKHOojPaxNPQPa4diHY1QtcR7zlHAJHNRqPB7W2Syw==",
+      "path": "entityframework/6.1.3",
+      "hashPath": "entityframework.6.1.3.nupkg.sha512"
+    },
+    "JSON/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n387Xh1oDWolCIVb2oMV1bWkEKBBk5iLkMuaiAQuLUaAZwowyym2s/6b/hFnmS5J3bzINmZ7I2WEbBAZMQd2dg==",
+      "path": "json/1.0.1",
+      "hashPath": "json.1.0.1.nupkg.sha512"
     },
     "Microsoft.AspNet.Mvc/5.2.7": {
       "type": "package",

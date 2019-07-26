@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Shop.Data;
 using Shop.Data.Interfaces;
 using Shop.Data.Mocks;
+using Shop.Data.Repository;
 
 namespace Shop
 {
@@ -29,8 +30,10 @@ namespace Shop
         {
             services.AddDbContext<AppDBContent>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
             services.AddMvc();
-            services.AddTransient < IAllCars,MockCars>();
-            services.AddTransient<ICarsCategory, MockCategory>();
+            //services.AddTransient<IAllCars, MockCars>();
+            //services.AddTransient<ICarsCategory, MockCategory>();
+            services.AddTransient<IAllCars, CarRepository>();
+            services.AddTransient<ICarsCategory, CategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
